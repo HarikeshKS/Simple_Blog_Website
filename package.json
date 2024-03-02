@@ -1,0 +1,19 @@
+{
+  "name": "simple_blog_website",
+  "version": "1.0.0",
+  "description": "Simple Blog website mini project for my learning and revision, includes authentication using OAuth and bycrypt with CRUD functionality.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blog",
+    "postgres",
+    "nodejs",
+    "expressjs",
+    "axios",
+    "CRUD"
+  ],
+  "author": "Harikesh Kumar Sharma",
+  "license": "MIT"
+}
