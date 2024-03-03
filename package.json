@@ -4,8 +4,9 @@
   "description": "Simple Blog website mini project for my learning and revision, includes authentication using OAuth and bycrypt with CRUD functionality.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js"
   },
+  "type": "module",
   "keywords": [
     "blog",
     "postgres",
@@ -15,5 +16,15 @@
     "CRUD"
   ],
   "author": "Harikesh Kumar Sharma",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-session": "^1.18.0",
+    "passport": "^0.7.0",
+    "pg": "^8.11.3"
+  }
 }
