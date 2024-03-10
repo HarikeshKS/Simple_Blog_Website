@@ -3,7 +3,7 @@ import {
   getAllUsersDb,
   deleteUserDb,
   getUserByUsernameDb,
-} from "../db/users.models";
+} from "../db/users.models.js";
 
 class UserService {
   createUser = async (user) => {
@@ -15,17 +15,17 @@ class UserService {
   };
   getUserByUsername = async (username) => {
     try {
-      const user = await getUserByUsernameDb(username);
+      const user = await getUserByUsernameDb(username.tolower());
       return user;
     } catch (error) {
-        console.error(error);
+      console.error(error);
     }
   };
   deleteUser = async (id) => {
     try {
       return await deleteUserDb(id);
     } catch (error) {
-        console.error(error);
+      console.error(error);
     }
   };
 
@@ -33,7 +33,7 @@ class UserService {
     try {
       return await getAllUsersDb();
     } catch (error) {
-        console.error(error);
+      console.error(error);
     }
   };
 }

@@ -1,11 +1,11 @@
-import { pool } from "../config/db.config";
+import { pool } from "../config/db.config.js";
 pool.connect();
 
 // create a new user
 const createUserDb = async ({ username, email, password }) => {
   const { rows: user } = await pool.query(
     `INSERT INTO users(username, email, password) 
-      VALUES($1, $2, $3, $4) 
+      VALUES($1, $2, $3) 
       returning *`,
     [username, email, password]
   );
